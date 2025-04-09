@@ -1,17 +1,14 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Constants from 'expo-constants';
+import { Canvas } from '@react-three/fiber/native';
 
+import Horse from './assets/Horse';
 const App = () => {
-  console.log('Constants.systemFonts: ', Constants.systemFonts);
-
   return (
-    <View>
-      <Text>Three JS Test App</Text>
-    </View>
+    <Canvas shadows={true}>
+      <ambientLight intensity={Math.PI / 2} />
+      <Horse />
+    </Canvas>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({});
